@@ -123,7 +123,7 @@ def fetch_meta_from_all(pages)
       str << "#{page},URL not found ? \n\r"
     end
     count += 1
-    break if count == 999
+    break if count == 300
   end
   str
 end
