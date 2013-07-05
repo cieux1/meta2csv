@@ -110,6 +110,7 @@ end
 
 def fetch_meta_from_all(pages)
   str = print_header
+  count = 0
   pages.each do |page|
     begin
       url = Page.new(page)
@@ -121,6 +122,8 @@ def fetch_meta_from_all(pages)
     rescue => e
       str << "#{page},URL not found ? \n\r"
     end
+    count += 1
+    break if count == 999
   end
   str
 end
