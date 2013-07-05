@@ -1,0 +1,17 @@
+body{background: #fff}
+#wrapper{margin:10px 50px;max-width: 900px;}
+h1 a {color:chocolate;}
+h2 {font-size: 18px;}
+.btn-group{margin-bottom:20px;}
+.btn-group a{color:#666;}
+li{list-style: none;margin: 10px 0;}
+.label{font-size: 140%;padding: 5px;font-weight: normal;margin-right: 10px}
+.smallen {font-size:50%;font-weight: normal;color: #555}
+.magnify {font-size:200%;font-weight: bold;color: #888;}
+.today {background:white;border:1px solid #ccc; }
+p {font-size:100%;color:#999;}
+.footer{margin:10px 50px;padding-top:100px;color:#999;}
+#ui-datepicker-div {display: none;}
+.container {width: 400px;margin: 30px 0;}
+.loading {margin: 10px 0;}
+#url-input {margin: 50px 0;}

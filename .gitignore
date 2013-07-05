@@ -1,0 +1,6 @@
+.bundle
+vendor
+/pkg
+/doc/api
+.DS_Store
+.redcar

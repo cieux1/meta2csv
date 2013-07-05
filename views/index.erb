@@ -1,0 +1,33 @@
+<script type="text/javascript">
+$(document).ready(function(){
+  $("input.btn").click(function () {
+    $("p.loading").show();
+  });
+});
+</script>
+
+<div class="row">
+  <div class="span12">
+    <h2>Export meta informaion from ALL pages in a website to CSV.</h2>
+    <p>Page titles, meta description, keywords, h1 and h2.<br />
+      plus noindex, nofollow, redirect status and cannonical urls.</p>
+  </div>
+  <div class="span12">
+    <div id="url-input">
+      <form method="get" action="/crawl">
+      <div class="magnify">
+        <input type="text" name="site_url" id="site_url" size="100" maxlength="100" value="http://" />
+      </div>
+      <p>ex: http://example.com/, http://example.com/news/blog/</p>
+      <input type="submit" value="Export" class="btn btn-medium btn-success" /> <a href="/">reset</a>
+    </div>
+    <p class="loading" style="display: none">Fetching... <img class="loading" src="img/loading.gif" /> <a href="/">(x) cancel</a> </p>
+    </form>
+  </div>
+</div>
+
+<p>UTF-8 site only.</p>
+<p>Leave this window open untill csv download begins.</p>
+<p>Export might take several minutes depends on the size of site. 60 pages/min approximately.</p>
+
+<p class="loading" style="display: none">The loading image will not stop when finished. It is a fake.</p>

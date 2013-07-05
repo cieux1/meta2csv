@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @title %></title>
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+  <link href="css/my.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<div id="wrapper">
+  <h1><a href="/"><%= @title %></a></h1>
+  <%= yield %>
+</div>
+<div class="footer">
+  metaExport2csv 2013
+</div>
+</body>
+</html>
