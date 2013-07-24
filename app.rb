@@ -52,7 +52,7 @@ end
 get '/crawl' do
   begin
     @domain = check_url(params[:site_url])
-    @site = "#{@domain}" + "/"
+    @site = @domain.to_s + "/"
     csv_name = "#{@domain}-#{Time.now.strftime("%Y-%m-%d-%H-%M-%S")}.csv"
     content_type 'text/csv'
     attachment csv_name
