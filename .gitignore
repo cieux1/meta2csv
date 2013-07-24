@@ -4,3 +4,4 @@ vendor
 /doc/api
 .DS_Store
 .redcar
+public/js/analytics.js
