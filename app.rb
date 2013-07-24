@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 require 'rubygems'
+require 'bundler/setup'
 require 'sinatra'
 require 'anemone'
 require './page_inspector'
@@ -16,8 +17,11 @@ def collected_pages(site_url)
 
   arr = []
   Anemone.crawl(site_url, options = opts) do |anemone|
+    count = 0
     anemone.on_every_page do |page|
       arr << page.url.to_s
+      count += 1
+      anemone.stop_crawl if count == 300
     end
   end
   arr.uniq
