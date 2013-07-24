@@ -21,7 +21,7 @@ def collected_pages(site_url)
     anemone.on_every_page do |page|
       arr << page.url.to_s
       count += 1
-      anemone.stop_crawl if count == 300
+      anemone.stop_crawl if count == 500
     end
   end
   arr.uniq
