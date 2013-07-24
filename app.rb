@@ -20,7 +20,7 @@ def collected_pages(site_url)
       arr << page.url.to_s
     end
   end
-  arr
+  arr.uniq
 end
 
 def get_meta(pages)
@@ -45,14 +45,14 @@ end
 
 
 get "/" do
-  @title = "metaExport2csv"
+  @title = "metaExport2csv (beta)"
   erb :index
 end
 
 get '/crawl' do
   begin
     @domain = check_url(params[:site_url])
-    @site = "#{@domain}/"
+    @site = "#{@domain}" + "/"
     csv_name = "#{@domain}-#{Time.now.strftime("%Y-%m-%d-%H-%M-%S")}.csv"
     content_type 'text/csv'
     attachment csv_name
